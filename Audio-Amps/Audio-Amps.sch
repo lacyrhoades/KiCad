@@ -1,0 +1,279 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:amps
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TDA7052A U?
+U 1 1 59EBB207
+P 5450 1700
+F 0 "U?" H 5450 850 60  0000 C CNN
+F 1 "TDA7052A" H 5450 1700 60  0000 C CNN
+F 2 "" H 5450 1900 60  0001 C CNN
+F 3 "" H 5450 1900 60  0001 C CNN
+	1    5450 1700
+	1    0    0    -1  
+$EndComp
+Text GLabel 4700 2050 0    60   Input ~ 0
+Line_Input
+Text GLabel 4700 1900 0    60   Input ~ 0
++5-18VDC
+Text GLabel 4700 2200 0    60   Input ~ 0
+GND
+Text GLabel 4700 2350 0    60   Input ~ 0
+0.4-1.4VDC
+Text GLabel 6200 1900 2    60   Input ~ 0
+Speaker-
+Text GLabel 6200 2350 2    60   Input ~ 0
+Speaker+
+Text GLabel 6200 2200 2    60   Input ~ 0
+GND
+NoConn ~ 6200 2050
+$Comp
+L TDA7052A U?
+U 1 1 59EBB654
+P 5450 4150
+F 0 "U?" H 5450 3300 60  0000 C CNN
+F 1 "TDA7052A" H 5450 4150 60  0000 C CNN
+F 2 "" H 5450 4350 60  0001 C CNN
+F 3 "" H 5450 4350 60  0001 C CNN
+	1    5450 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 59EBB6AB
+P 4400 4500
+F 0 "C?" H 4425 4600 50  0000 L CNN
+F 1 ".47µF" H 4425 4400 50  0000 L CNN
+F 2 "" H 4438 4350 50  0001 C CNN
+F 3 "" H 4400 4500 50  0001 C CNN
+	1    4400 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 59EBB706
+P 4000 4650
+F 0 "R?" V 4080 4650 50  0000 C CNN
+F 1 "5k" V 4000 4650 50  0000 C CNN
+F 2 "" V 3930 4650 50  0001 C CNN
+F 3 "" H 4000 4650 50  0001 C CNN
+	1    4000 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L +VDC #PWR?
+U 1 1 59EBB743
+P 4000 4350
+F 0 "#PWR?" H 4000 4250 50  0001 C CNN
+F 1 "+VDC" H 4000 4600 50  0000 C CNN
+F 2 "" H 4000 4350 50  0001 C CNN
+F 3 "" H 4000 4350 50  0001 C CNN
+	1    4000 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4800 4000 4850
+Wire Wire Line
+	4000 4850 4000 4950
+Connection ~ 4000 4500
+Wire Wire Line
+	4550 4500 4700 4500
+Text GLabel 3700 4500 0    60   Input ~ 0
+Line_Input
+Wire Wire Line
+	3700 4500 4000 4500
+Wire Wire Line
+	4000 4500 4250 4500
+Wire Wire Line
+	4700 4650 4500 4650
+Wire Wire Line
+	4500 4650 4500 4850
+Wire Wire Line
+	4500 4850 4000 4850
+Connection ~ 4000 4850
+$Comp
+L POT RV?
+U 1 1 59EBBAC2
+P 4700 5350
+F 0 "RV?" V 4525 5350 50  0000 C CNN
+F 1 "10k Log" V 4600 5350 50  0000 C CNN
+F 2 "" H 4700 5350 50  0001 C CNN
+F 3 "" H 4700 5350 50  0001 C CNN
+	1    4700 5350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 59EBBB62
+P 4300 5350
+F 0 "R?" V 4380 5350 50  0000 C CNN
+F 1 "33k" V 4300 5350 50  0000 C CNN
+F 2 "" V 4230 5350 50  0001 C CNN
+F 3 "" H 4300 5350 50  0001 C CNN
+	1    4300 5350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 5350 4550 5350
+$Comp
+L R R?
+U 1 1 59EBBC3B
+P 5150 5350
+F 0 "R?" V 5230 5350 50  0000 C CNN
+F 1 "470" V 5150 5350 50  0000 C CNN
+F 2 "" V 5080 5350 50  0001 C CNN
+F 3 "" H 5150 5350 50  0001 C CNN
+	1    5150 5350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4850 5350 5000 5350
+$Comp
+L GND #PWR?
+U 1 1 59EBBC9C
+P 5400 5350
+F 0 "#PWR?" H 5400 5100 50  0001 C CNN
+F 1 "GND" H 5400 5200 50  0000 C CNN
+F 2 "" H 5400 5350 50  0001 C CNN
+F 3 "" H 5400 5350 50  0001 C CNN
+	1    5400 5350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4700 4350 4550 4350
+Wire Wire Line
+	4550 4350 4000 4350
+Wire Wire Line
+	4700 4800 4700 5200
+$Comp
+L +VDC #PWR?
+U 1 1 59EBBF9E
+P 3950 5350
+F 0 "#PWR?" H 3950 5250 50  0001 C CNN
+F 1 "+VDC" H 3950 5600 50  0000 C CNN
+F 2 "" H 3950 5350 50  0001 C CNN
+F 3 "" H 3950 5350 50  0001 C CNN
+	1    3950 5350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4150 5350 3950 5350
+Text Notes 3900 4300 2    60   ~ 0
++5V
+Text Notes 3950 5550 2    60   ~ 0
++5V
+Wire Wire Line
+	5400 5350 5300 5350
+$Comp
+L Speaker LS?
+U 1 1 59EBC0E6
+P 6850 4350
+F 0 "LS?" H 6900 4575 50  0000 R CNN
+F 1 "8 Ohm" H 6900 4500 50  0000 R CNN
+F 2 "" H 6850 4150 50  0001 C CNN
+F 3 "" H 6840 4300 50  0001 C CNN
+	1    6850 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 4350 6200 4350
+Wire Wire Line
+	6650 4450 6550 4450
+Wire Wire Line
+	6550 4450 6550 4800
+Wire Wire Line
+	6550 4800 6200 4800
+$Comp
+L GND #PWR?
+U 1 1 59EBC19F
+P 6300 4650
+F 0 "#PWR?" H 6300 4400 50  0001 C CNN
+F 1 "GND" H 6300 4500 50  0000 C CNN
+F 2 "" H 6300 4650 50  0001 C CNN
+F 3 "" H 6300 4650 50  0001 C CNN
+	1    6300 4650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6300 4650 6200 4650
+$Comp
+L CP C?
+U 1 1 59EBC883
+P 4550 4050
+F 0 "C?" H 4575 4150 50  0000 L CNN
+F 1 "220µF" H 4575 3950 50  0000 L CNN
+F 2 "" H 4588 3900 50  0001 C CNN
+F 3 "" H 4550 4050 50  0001 C CNN
+	1    4550 4050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 4200 4550 4350
+Connection ~ 4550 4350
+$Comp
+L GND #PWR?
+U 1 1 59EBC9CC
+P 4550 3800
+F 0 "#PWR?" H 4550 3550 50  0001 C CNN
+F 1 "GND" H 4550 3650 50  0000 C CNN
+F 2 "" H 4550 3800 50  0001 C CNN
+F 3 "" H 4550 3800 50  0001 C CNN
+	1    4550 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 3800 4550 3900
+$Comp
+L GNDS #PWR?
+U 1 1 59EBCA1B
+P 4000 4950
+F 0 "#PWR?" H 4000 4700 50  0001 C CNN
+F 1 "GNDS" H 4000 4800 50  0000 C CNN
+F 2 "" H 4000 4950 50  0001 C CNN
+F 3 "" H 4000 4950 50  0001 C CNN
+	1    4000 4950
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

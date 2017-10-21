@@ -1,0 +1,181 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:teensy
+LIBS:CB-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "CB Radio Retrofit"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM386 U1
+U 1 1 59DEBBA2
+P 3350 4300
+F 0 "U1" H 3400 4600 50  0000 L CNN
+F 1 "LM386" H 3400 4500 50  0000 L CNN
+F 2 "" H 3450 4400 50  0001 C CNN
+F 3 "" H 3550 4500 50  0001 C CNN
+	1    3350 4300
+	-1   0    0    -1  
+$EndComp
+Entry Wire Line
+	32300 5350 32400 5450
+Entry Wire Line
+	32300 5350 32400 5450
+Entry Wire Line
+	32300 5350 32400 5450
+Entry Wire Line
+	32300 5350 32400 5450
+Entry Wire Line
+	32300 5350 32400 5450
+Entry Wire Line
+	36550 4750 36650 4850
+$Comp
+L SD_Card J1
+U 1 1 59DEBC54
+P 7700 2800
+F 0 "J1" H 7050 3350 50  0000 C CNN
+F 1 "SD_Card" H 8300 2250 50  0000 C CNN
+F 2 "10067847-001" H 7900 3150 50  0001 C CNN
+F 3 "" H 7700 2800 50  0001 C CNN
+	1    7700 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Teensy3.2 U2
+U 1 1 59DEBF04
+P 5450 3700
+F 0 "U2" H 5450 5200 60  0000 C CNN
+F 1 "Teensy3.2" H 5450 2200 60  0000 C CNN
+F 2 "" H 5450 2900 60  0000 C CNN
+F 3 "" H 5450 2900 60  0000 C CNN
+	1    5450 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C1
+U 1 1 59DEBF5B
+P 4050 4200
+F 0 "C1" H 4075 4300 50  0000 L CNN
+F 1 "CP1" H 4075 4100 50  0000 L CNN
+F 2 "" H 4050 4200 50  0001 C CNN
+F 3 "" H 4050 4200 50  0001 C CNN
+	1    4050 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 59DEC50B
+P 3650 4400
+F 0 "#PWR01" H 3650 4150 50  0001 C CNN
+F 1 "GND" H 3650 4250 50  0000 C CNN
+F 2 "" H 3650 4400 50  0001 C CNN
+F 3 "" H 3650 4400 50  0001 C CNN
+	1    3650 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 59DEC61F
+P 3450 4600
+F 0 "#PWR02" H 3450 4350 50  0001 C CNN
+F 1 "GND" H 3450 4450 50  0000 C CNN
+F 2 "" H 3450 4600 50  0001 C CNN
+F 3 "" H 3450 4600 50  0001 C CNN
+	1    3450 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C2
+U 1 1 59DEC7B9
+P 2750 4300
+F 0 "C2" H 2775 4400 50  0000 L CNN
+F 1 "220 µF" H 2775 4200 50  0000 L CNN
+F 2 "" H 2750 4300 50  0001 C CNN
+F 3 "" H 2750 4300 50  0001 C CNN
+	1    2750 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Speaker LS1
+U 1 1 59DEC89A
+P 2150 4300
+F 0 "LS1" H 2200 4525 50  0000 R CNN
+F 1 "Speaker" H 2200 4450 50  0000 R CNN
+F 2 "" H 2150 4100 50  0001 C CNN
+F 3 "" H 2140 4250 50  0001 C CNN
+	1    2150 4300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 59DEC90C
+P 2350 4600
+F 0 "#PWR03" H 2350 4350 50  0001 C CNN
+F 1 "GND" H 2350 4450 50  0000 C CNN
+F 2 "" H 2350 4600 50  0001 C CNN
+F 3 "" H 2350 4600 50  0001 C CNN
+	1    2350 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR04
+U 1 1 59DECA7F
+P 3450 3900
+F 0 "#PWR04" H 3450 3750 50  0001 C CNN
+F 1 "+5V" H 3450 4040 50  0000 C CNN
+F 2 "" H 3450 3900 50  0001 C CNN
+F 3 "" H 3450 3900 50  0001 C CNN
+	1    3450 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3900 3450 4000
+Wire Wire Line
+	3050 4300 2900 4300
+Wire Wire Line
+	2600 4300 2350 4300
+Wire Wire Line
+	2350 4400 2350 4600
+Wire Wire Line
+	3900 4200 3650 4200
+Wire Wire Line
+	4200 4200 4450 4200
+$EndSCHEMATC
