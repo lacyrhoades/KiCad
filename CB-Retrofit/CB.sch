@@ -1,36 +1,5 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:teensy
 LIBS:4pdt
-LIBS:switches
 LIBS:CB-cache
 EELAYER 25 0
 EELAYER END
@@ -180,17 +149,6 @@ F 3 "" H 3900 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
-U 1 1 5A0E41E3
-P 2400 2450
-F 0 "#PWR06" H 2400 2200 50  0001 C CNN
-F 1 "GND" H 2400 2300 50  0000 C CNN
-F 2 "" H 2400 2450 50  0001 C CNN
-F 3 "" H 2400 2450 50  0001 C CNN
-	1    2400 2450
-	1    0    0    -1  
-$EndComp
-$Comp
 L SW_Push SW3
 U 1 1 5A0E42FF
 P 8900 1950
@@ -271,22 +229,6 @@ Wire Wire Line
 Wire Wire Line
 	4200 4200 4450 4200
 Wire Wire Line
-	3800 2100 3800 2700
-Wire Wire Line
-	3800 2700 4450 2700
-Wire Wire Line
-	4450 2800 2300 2800
-Wire Wire Line
-	2300 2800 2300 2450
-Wire Wire Line
-	4450 2900 2200 2900
-Wire Wire Line
-	2200 2900 2200 2450
-Wire Wire Line
-	4450 3000 2100 3000
-Wire Wire Line
-	2100 3000 2100 2450
-Wire Wire Line
 	8050 3450 7750 3450
 Wire Wire Line
 	4450 3700 4200 3700
@@ -326,16 +268,16 @@ Wire Wire Line
 $Comp
 L GNDA #PWR010
 U 1 1 5A1A38AF
-P 6700 4700
-F 0 "#PWR010" H 6700 4450 50  0001 C CNN
-F 1 "GNDA" H 6700 4550 50  0000 C CNN
-F 2 "" H 6700 4700 50  0001 C CNN
-F 3 "" H 6700 4700 50  0001 C CNN
-	1    6700 4700
-	1    0    0    -1  
+P 7600 4600
+F 0 "#PWR010" H 7600 4350 50  0001 C CNN
+F 1 "GNDA" H 7600 4450 50  0000 C CNN
+F 2 "" H 7600 4600 50  0001 C CNN
+F 3 "" H 7600 4600 50  0001 C CNN
+	1    7600 4600
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	6450 4600 6700 4600
+	6450 4600 7600 4600
 $Comp
 L +5V #PWR011
 U 1 1 5A1A3A9B
@@ -523,7 +465,6 @@ NoConn ~ 6450 4200
 NoConn ~ 6450 4300
 NoConn ~ 6450 4400
 NoConn ~ 6450 4700
-NoConn ~ 6450 4800
 NoConn ~ 6450 4900
 NoConn ~ 6450 5000
 NoConn ~ 4450 5000
@@ -791,8 +732,6 @@ Wire Wire Line
 	5350 6000 5350 6250
 Wire Wire Line
 	6950 4500 6450 4500
-Wire Wire Line
-	6700 4600 6700 4700
 $Comp
 L GND #PWR027
 U 1 1 5A1B1609
@@ -921,10 +860,10 @@ Wire Wire Line
 Text Label 7450 3050 2    60   ~ 0
 TEENSY_POW
 $Comp
-L 3pdt SW?
+L 3pdt SW2
 U 1 1 5A1B8D26
 P 2300 1850
-F 0 "SW?" H 2300 1750 60  0000 C CNN
+F 0 "SW2" H 2300 1750 60  0000 C CNN
 F 1 "3pdt" H 2300 1900 60  0000 C CNN
 F 2 "" H 2300 1650 60  0001 C CNN
 F 3 "" H 2300 1650 60  0001 C CNN
@@ -932,14 +871,30 @@ F 3 "" H 2300 1650 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L PBOOST500 U?
-U 1 1 5A1B8DA7
+L PBOOST500 U1
+U 1 1 5A1B34A1
 P 9800 1050
-F 0 "U?" H 9800 1050 60  0000 C CNN
+F 0 "U1" H 9800 1050 60  0000 C CNN
 F 1 "PBOOST500" H 9800 950 60  0000 C CNN
 F 2 "" H 9800 1050 60  0001 C CNN
 F 3 "" H 9800 1050 60  0001 C CNN
 	1    9800 1050
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3800 2100 3800 2400
+Text Label 3800 2400 2    60   ~ 0
+PTT
+Text Label 6650 4800 0    60   ~ 0
+PTT
+Wire Wire Line
+	6650 4800 6450 4800
+NoConn ~ 4450 2700
+NoConn ~ 2100 2450
+NoConn ~ 2200 2450
+NoConn ~ 2300 2450
+NoConn ~ 2400 2450
+NoConn ~ 4450 3000
+NoConn ~ 4450 2900
+NoConn ~ 4450 2800
 $EndSCHEMATC
