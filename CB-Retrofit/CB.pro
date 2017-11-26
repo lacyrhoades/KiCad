@@ -29,7 +29,6 @@ version=1
 version=1
 LibDir=library
 [eeschema/libraries]
-LibName1=CB-rescue
 LibName2=power
 LibName3=device
 LibName4=transistors
